@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <style>
+        h1{ color:Orange;
+            position:absolute;
+            top:20%;
+            left:10%
+            }
+        #b1{background-color:black;
+                             color:orange;
+                             border-style:ridge;
+                             border-width:4px;
+                             border-radius:5px;
+                             position:absolute;
+                             top:100%;
+                             left:16%;
+                             width:100px
+                             }
+
+        #b2{background-color:black;
+                             color:orange;
+                             border-style:ridge;
+                             border-width:4px;
+                             border-radius:5px;
+                             position:absolute;
+                             top:65%;
+                             left:22%;
+                             width:80px
+                             }
+
+        #f1{position:absolute;
+            top:40%;
+            left:10%;
+            font-size:20px;
+            text-transformation:Capitalize;
+            }
+        #f2{position:absolute;
+            top:40%;
+            left:10%;
+            font-size:20px;
+            text-transformation:Capitalize;
+            }
+
+
+        #myid1{background-image=url(% static 'img2.jpg' %}");
+               background-repeat:no-repeat;
+               background-size:cover;
+               background-attachment:fixed;
+               background-position:center;
+               }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>ADD</title>
+</head>
+<body background="/static/images/img2.jpg" align="center" id="myid1">
+<h1 align="center"><big><b>Create Fashion Blog...</b></big></h1>
+
+ <form action="/updatedata/{{record.id}}"  method="post" align="left" id="f1">
+   {% csrf_token %}
+
+            <p><label for="id_name">Name:</label> <input type="text" name="name" maxlength="50" required id="id_name" value="{{record.name}}"></p>
+<p><label for="id_title">Title:</label> <input type="text" name="title" maxlength="100" required id="id_title" value="{{record.title}}"></p>
+<p><label for="id_post">Post:</label> <input type="post"  name="post" maxlength="100000000" required id="id_post" value="{{record.post}}"></p>
+
+            <input type="hidden" name="csrfmiddlewaretoken" value="MIXnN4XlUOJ88hSTu3xF1T5zW7XD1yHpLOOxIUG3RTGUA8NRTJKfPlHbA5ZGz6mD">
+
+            <button type="submit" id="b1">UPDATE BLOG</button>
+
+        </form>
+<form action="home">
+    <button type="submit" id="b2">BACK</button>
+</form>
+</body>
+</html>

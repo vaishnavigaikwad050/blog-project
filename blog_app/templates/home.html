@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    {% load static %}
+    <style>
+        h1{ color:Black;
+            position:absolute;
+            top:30%;
+            left:20%
+            }
+        h2{ color:Black;
+            position:absolute;
+            top:50%;
+            left:35%
+            }
+        #b1{background-color:black;
+                             color:white;
+                             border-style:ridge;
+                             border-width:4px;
+                             border-radius:5px;
+                             position:absolute;
+                             top:60%;
+                             left:35%;
+                             width:100px
+                             }
+
+        #b2{background-color:black;
+                             color:white;
+                             border-style:ridge;
+                             border-width:4px;
+                             border-radius:5px;
+                             position:absolute;
+                             top:60%;
+                             left:45%;
+                             width:100px
+                             }
+
+        #myid1{background-image=url("{% static 'background.jpg' %}");
+               background-repeat:no-repeat;
+               background-size:cover;
+               }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body background="{% static 'images/background.jpg' %}" id="myid1">
+<h1 align="center"><marquee><big><b>Feel the blogging experience to create your unique and dynamic blog</b></big></marquee></h1>
+<h2 align="center"><big><b><i>FASHION BLOG</i></b></big></h2>
+
+<form action="addblog">
+    <button type="submit" id="b1"> ADD </button>
+</form>
+
+<form action="displaydata">
+<button type="submit" id="b2">VIEW</button>
+</form>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <style>
+        h1{ color:Orange;
+            position:absolute;
+            top:20%;
+            left:10%
+            }
+        #b1{background-color:black;
+                             color:orange;
+                             border-style:ridge;
+                             border-width:4px;
+                             border-radius:5px;
+                             position:absolute;
+                             top:100%;
+                             left:25%;
+                             width:100px
+                             }
+        #b2{background-color:black;
+                             color:orange;
+                             border-style:ridge;
+                             border-width:4px;
+                             border-radius:5px;
+                             position:absolute;
+                             top:88%;
+                             left:30%;
+                             width:100px
+                             }
+
+        #f1{position:absolute;
+            top:40%;
+            left:10%;
+            font-size:20px;
+            text-transformation:Capitalize;
+            }
+        #f2{position:absolute;
+            top:45%;
+            left:10%;
+            font-size:20px;
+            text-transformation:Capitalize;
+            }
+
+
+        #myid1{background-image=url(% static 'img2.jpg' %}");
+               background-repeat:no-repeat;
+               background-size:cover;
+               background-attachment:fixed;
+               background-position:center;
+               }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>ADD</title>
+</head>
+<body background="{% static 'images/img2.jpg' %}" align="center" id="myid1">
+<h1 align="center"><big><b>Create Fashion Blog...</b></big></h1>
+
+ <form action="add"  method="post" align="left" id="f1">
+
+            {{form.as_p}}
+
+            {% csrf_token %}
+
+            <button type="submit" id="b1">ADD BLOG</button>
+
+ </form>
+
+<form action="home">
+<button type="submit" id="b2">BACK</button>
+</form>
+
+</body>
+</html>

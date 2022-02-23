@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <style>
+        #myid1{background-image=url("{% static 'makeup.jpg' %}");
+                background-repeat:no-repeat;
+                background-size:cover;
+                background-attachment:fixed;
+                background-position:center;}
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body background="{% static 'images/makeup.jpg' %}" align="center" id="myid1">
+
+
+ <h1 align="center">Specific Blog</h1>
+
+            {% if searched%}
+                <h2 align="center">You search for</h2>
+
+                    <div class="container" align="center">
+                         <h3 align="center"> {{searched}} </h3>
+                                    {% for i in data %}
+                            <h4>Created by  {{i.name}} , at {{i.dat}}</h4>
+                                    <p><b>Post: {{i.post}} </b></p>>
+                                        {% endfor %}
+            {% endif %}
+
+                     </div>
+
+</body>
+</html>
